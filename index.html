@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freeman Hui — Machine Learning for Neural &amp; Biological Systems</title>
+<meta name="description" content="Freeman Hui (許紹農) — AI Director at the South China Morning Post and independent researcher working on rigorous measurement of representations in neural and biological systems. NeurReps 2026 poster #46; RECOMB 2027 submission; C. elegans virtual-cell programme.">
+<style>
+  :root{
+    --navy:#1b2f4a; --teal:#0e7c7b; --blue:#2a6fb5; --orange:#e07b2a;
+    --ink:#1f2937; --grey:#6b7280; --bg1:#f2f5fa; --bg3:#eef6f5; --line:#d7dee8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;color:var(--ink);line-height:1.55;background:#fff}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:860px;margin:0 auto;padding:0 20px 56px}
+  header{background:var(--navy);color:#fff;padding:38px 0 30px}
+  header .wrap{padding-bottom:0}
+  .id{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+  .id img{width:104px;height:104px;border-radius:50%;border:3px solid rgba(255,255,255,.35);background:#fff}
+  h1{margin:0;font-size:34px;letter-spacing:.2px}
+  h1 .zh{font-size:19px;color:#bcd0e8;font-weight:500}
+  .affil{color:#bcd0e8;margin-top:4px;font-size:15px}
+  .tagline{margin-top:14px;font-size:17px;max-width:720px}
+  .strip{background:var(--teal);color:#fff;text-align:center;padding:9px 14px;font-size:14.5px}
+  h2{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);border-bottom:2px solid var(--line);padding-bottom:6px;margin:34px 0 14px}
+  .card{background:var(--bg1);border-radius:10px;padding:16px 18px 12px;margin:0 0 14px;border-left:5px solid var(--teal)}
+  .card.b2{border-left-color:var(--blue)} .card.b3{border-left-color:var(--orange)}
+  .card .venue{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--teal);text-transform:uppercase}
+  .card.b2 .venue{color:var(--blue)} .card.b3 .venue{color:var(--orange)}
+  .card h3{margin:3px 0 8px;font-size:19px;color:var(--navy)}
+  .card p{margin:0 0 8px;font-size:15px}
+  .links{font-size:14px;margin-top:2px}
+  .links a{margin-right:14px;font-weight:600}
+  ul.pubs{margin:0;padding-left:20px}
+  ul.pubs li{margin-bottom:9px;font-size:15px}
+  .toolkit{background:var(--bg3);border-radius:10px;padding:14px 18px;font-size:14.5px}
+  .toolkit b{color:var(--navy);letter-spacing:.08em;font-size:12px;text-transform:uppercase;display:block;margin-bottom:4px}
+  .contact{font-size:15.5px}
+  .contact div{margin-bottom:6px}
+  footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;color:var(--grey);font-size:13px}
+  .btn{display:inline-block;background:var(--navy);color:#fff;padding:8px 16px;border-radius:8px;font-weight:600;font-size:14.5px}
+  .btn:hover{background:var(--teal);text-decoration:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="id">
+      <img src="https://github.com/freemanhui.png" alt="Freeman Hui">
+      <div>
+        <h1>Freeman Hui <span class="zh">許紹農</span></h1>
+        <div class="affil">Hong Kong · AI Director, South China Morning Post · MPhil in Information Engineering, CUHK</div>
+      </div>
+    </div>
+    <p class="tagline">Machine learning for neural &amp; biological systems — rigorous measurement of representations, from cortical populations to single-cell atlases.</p>
+  </div>
+</header>
+
+<div class="strip"><b>NeurIPS 2026 · Sydney, 6–13 Dec</b> — NeurReps poster #46, Fri 11 Dec, ICC Sydney Hall 4 &nbsp;·&nbsp; <b>Open to research roles &amp; collaborations in AI × life science</b></div>
+
+<div class="wrap">
+
+  <h2>About</h2>
+  <p>I lead AI strategy and newsroom AI systems at the South China Morning Post (RAG copilots, AI proofreading, timeline automation) and run an independent research programme on how representations should be <b>measured before they are believed</b>. Previously Nokia, Microsoft, LeEco and Conviva. Moving toward independent research and advisory work at the AI × life-science interface. Side programme: <b>R<sub>self</sub></b>, a metric for self-model stability in cross-model LLM dialogues.</p>
+  <p><a class="btn" href="brief.html">One-page research brief (printable) →</a> <p><a class="btn" href="brief.html">One-page research brief (printable) →</a></p>nbsp;<a href="Freeman-Hui-Research-Brief.pdf">PDF version</a></p>
+
+  <h2>Research</h2>
+
+  <div class="card">
+    <div class="venue">NeurReps 2026 · Extended Abstract #46 · Poster, 11 Dec, ICC Sydney</div>
+    <h3>Three guards for subspace claims: chance, stability and metric</h3>
+    <p>Do evoked neural population patterns live inside the spontaneous-activity subspace? Classics said yes; modern large-scale recordings say near-orthogonal. I show the field’s standard “containment” number is not one well-posed quantity, and decompose the disagreement under three guards: <b>excess over an explicit rotation null</b> (a random <i>k</i>-dim subspace already captures <i>k/n</i> — a 10–30-point floor at classic scales), a <b>boundary-gap conditioning screen</b> (median gaps fall below 1.05 beyond <i>k</i> ≈ 3–5, while published work uses <i>k</i> = 10–128), and a <b>declared metric</b> (rate normalisation moves hippocampal cross-state excess from 0.32–0.61 to 0.02–0.19). Data: 60 Neuropixels populations, ~10k-neuron two-photon V1, monkey DMFC, HD thalamus, hippocampal CA1; measures ship with a 15-test known-answer battery.</p>
+    <p class="links"><a href="https://openreview.net/pdf?id=6IAJptXDrs">Paper (OpenReview PDF)</a></p>
+  </div>
+
+  <div class="card b2">
+    <div class="venue">RECOMB 2027 · Submitted (EasyChair #22)</div>
+    <h3>Separating higher-order information from prediction in cancer co-mutation</h3>
+    <p>Most “higher-order” claims in biology rest on pairwise statistics. This work asks how much of cancer co-mutation structure is genuinely <b>beyond pairs</b>, and separates two quantities that are often conflated: the higher-order <b>information present</b> in the data versus the <b>predictive gain</b> a model can actually extract from it. Solo-authored.</p>
+    <p class="links"><a href="https://github.com/freemanhui/beyond-pairs">Code (GitHub)</a></p>
+  </div>
+
+  <div class="card b3">
+    <div class="venue">C. elegans · Single-cell programme</div>
+    <h3>A worm virtual cell: atlas, state models &amp; a small-RNA study</h3>
+    <p><i>C. elegans</i> is the only animal with a complete cell lineage and a complete connectome (302 neurons) — a whole-organism testbed the large labs leave alone. I am building a worm-specific cell embedding and an open cell-type annotation tool on Arc scBaseCount data (<b>295,473 cells, 58 samples</b>), with a <i>daf-2</i> ageing-perturbation case study under strict held-out validation — baselines first. Companion paper: “The inheritance state reweights the small RNA pool beyond uniform gain in <i>C. elegans</i>”, in submission at <i>Briefings in Functional Genomics</i> (Oxford University Press).</p>
+    <p class="links"><a href="https://github.com/freemanhui/celegans-virtual-cell">Project (GitHub)</a></p>
+  </div>
+
+  <h2>Publications &amp; submissions</h2>
+  <ul class="pubs">
+    <li><b>Three guards for subspace claims: chance, stability, and metric in the spontaneous-activity debate.</b> NeurReps 2026 (NeurIPS Workshop on Symmetry and Geometry in Neural Representations), Extended Abstract #46. <a href="https://openreview.net/pdf?id=6IAJptXDrs">[PDF]</a></li>
+    <li><b>Separating higher-order information from prediction in cancer co-mutation.</b> Submitted to RECOMB 2027. <a href="https://github.com/freemanhui/beyond-pairs">[Code]</a></li>
+    <li><b>The inheritance state reweights the small RNA pool beyond uniform gain in <i>C. elegans</i>.</b> Manuscript in submission at <i>Briefings in Functional Genomics</i> (OUP).</li>
+    <li><b>R<sub>self</sub>: measuring self-model stability in cross-model LLM dialogues.</b> Ongoing programme. <a href="https://github.com/freemanhui/ai-consciousness-research">[Code]</a></li>
+  </ul>
+
+  <h2>Methods toolkit</h2>
+  <div class="toolkit"><b>Methods</b>Representation geometry · information theory · topological data analysis (persistent homology) · single-cell ML (scVI, transformers) · large-scale LLM experimentation · evaluation design — nulls, conditioning, metric audits</div>
+
+  <h2>Contact</h2>
+  <div class="contact">
+    <div>✉️ <a href="mailto:freeman.hui@link.cuhk.edu.hk">freeman.hui@link.cuhk.edu.hk</a></div>
+    <div>💻 <a href="https://github.com/freemanhui">github.com/freemanhui</a></div>
+    <div>📄 <a href="brief.html">Research brief (one page, printable)</a></div>
+  </div>
+
+  <footer>© 2026 Freeman Hui · Hong Kong · In Sydney 6–13 December 2026 for NeurIPS / NeurReps — say hello at poster #46.</footer>
+
+</div>
+</body>
+</html>
