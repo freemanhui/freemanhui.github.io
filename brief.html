@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freeman Hui — Research Brief (NeurIPS 2026)</title>
+<style>
+  :root{--navy:#1b2f4a;--teal:#0e7c7b;--blue:#2a6fb5;--orange:#e07b2a;--ink:#1f2937;--grey:#6b7280;--bg1:#f2f5fa;--bg3:#eef6f5;--line:#d7dee8}
+  body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;color:var(--ink);line-height:1.42;font-size:14.5px}
+  a{color:var(--blue);text-decoration:none}
+  .page{max-width:800px;margin:0 auto;padding:0 18px 30px}
+  header{background:var(--navy);color:#fff;padding:20px 18px 14px;margin:0 -18px}
+  h1{margin:0;font-size:27px}
+  h1 .sub{font-size:13.5px;color:#bcd0e8;font-weight:500}
+  .tagline{margin-top:6px;font-size:15px}
+  .strip{background:var(--teal);color:#fff;text-align:center;padding:7px 10px;font-size:13.5px;margin:0 -18px 14px}
+  .card{background:var(--bg1);border-radius:8px;padding:11px 15px 7px;margin:0 0 11px;border-left:5px solid var(--teal)}
+  .card.b2{border-left-color:var(--blue)} .card.b3{border-left-color:var(--orange)}
+  .venue{font-size:11px;font-weight:700;letter-spacing:.07em;color:var(--teal);text-transform:uppercase}
+  .b2 .venue{color:var(--blue)} .b3 .venue{color:var(--orange)}
+  .card h2{margin:2px 0 6px;font-size:17.5px;color:var(--navy)}
+  .card p{margin:0 0 6px}
+  .toolkit{background:var(--bg3);border-radius:8px;padding:10px 15px;margin-bottom:12px}
+  .toolkit b{color:var(--navy);letter-spacing:.08em;font-size:11px;text-transform:uppercase;display:block;margin-bottom:3px}
+  footer{border-top:1px solid var(--line);padding-top:9px;font-size:13.5px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+  footer img{width:64px;height:64px}
+  .back{font-size:13px;margin:10px 0 0}
+  @page{size:A4;margin:11mm}
+  @media print{.back{display:none} body{font-size:13.5px}}
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>Freeman Hui <span class="sub">Hong Kong · AI Director, South China Morning Post · MPhil, CUHK</span></h1>
+    <div class="tagline">Machine learning for neural &amp; biological systems — rigorous measurement of representations, from cortical populations to single-cell atlases.</div>
+  </header>
+  <div class="strip"><b>NeurIPS 2026 · Sydney, 6–13 Dec</b> — NeurReps poster #46, Fri 11 Dec, ICC Sydney Hall 4 · <b>Open to research roles &amp; collaborations in AI × life science</b></div>
+
+  <p>I lead AI strategy and newsroom AI systems at the SCMP (RAG copilots, AI proofreading, timeline automation) and run an independent research programme on how representations should be <b>measured before they are believed</b>. Previously Nokia, Microsoft, LeEco and Conviva. Moving toward independent research and advisory work at the AI × life-science interface. Side programme: <b>R<sub>self</sub></b>, a metric for self-model stability in cross-model LLM dialogues.</p>
+
+  <div class="card">
+    <div class="venue">1 · NeurReps 2026 — Extended Abstract #46 (this poster)</div>
+    <h2>Three guards for subspace claims: chance, stability and metric</h2>
+    <p><b>Question.</b> Do evoked neural population patterns live inside the spontaneous-activity subspace? Classics said yes; modern large-scale recordings say near-orthogonal. The field’s standard “containment” number is not one well-posed quantity.</p>
+    <p><b>Three guards.</b> Report <b>excess over an explicit rotation null</b> — a random <i>k</i>-dim subspace already captures <i>k/n</i> of any probe (a 10–30-point floor at classic scales). <b>Screen conditioning</b> by the boundary gap σ<sub>k</sub>/σ<sub>k+1</sub> — median gaps fall below 1.05 beyond <i>k</i> ≈ 3–5, while published work uses <i>k</i> = 10–128. <b>Declare the metric</b> — rate normalisation moves hippocampal cross-state excess from 0.32–0.61 to 0.02–0.19.</p>
+    <p><b>Result.</b> The literature’s disagreement decomposes into chance-floor inflation, ill-conditioned projectors and undeclared metric + state mixing; the small V1 excess survives all guards. Data: 60 Neuropixels populations, ~10k-neuron two-photon V1, monkey DMFC, HD thalamus, hippocampal CA1; measures ship with a 15-test known-answer battery.</p>
+  </div>
+
+  <div class="card b2">
+    <div class="venue">2 · RECOMB 2027 — Submitted (EasyChair #22)</div>
+    <h2>Separating higher-order information from prediction in cancer co-mutation</h2>
+    <p>Most “higher-order” claims in biology rest on pairwise statistics. This work asks how much of cancer co-mutation structure is genuinely <b>beyond pairs</b>.</p>
+    <p>It separates two quantities that are often conflated: the higher-order <b>information present</b> in the data versus the <b>predictive gain</b> a model can actually extract from it.</p>
+    <p>Solo-authored; code at github.com/freemanhui/beyond-pairs.</p>
+  </div>
+
+  <div class="card b3">
+    <div class="venue">3 · C. elegans — Single-cell programme</div>
+    <h2>A worm virtual cell: atlas, state models &amp; a small-RNA study</h2>
+    <p><i>C. elegans</i> is the only animal with a complete cell lineage and a complete connectome (302 neurons) — a whole-organism testbed the large labs leave alone.</p>
+    <p><b>Atlas direction:</b> a worm-specific embedding and an open cell-type annotation tool on Arc scBaseCount data (<b>295,473 cells, 58 samples</b>), with a <i>daf-2</i> ageing-perturbation case study under strict held-out validation — baselines first, per the Virtual Cell Challenge lesson.</p>
+    <p><b>Companion paper:</b> “The inheritance state reweights the small RNA pool beyond uniform gain in <i>C. elegans</i>” — manuscript in submission at <i>Briefings in Functional Genomics</i> (Oxford University Press).</p>
+  </div>
+
+  <div class="toolkit"><b>Methods toolkit</b>Representation geometry · information theory · topological data analysis (persistent homology) · single-cell ML (scVI, transformers) · large-scale LLM experimentation · evaluation design — nulls, conditioning, metric audits</div>
+
+  <footer>
+    <div><b>Contact</b>&nbsp; freeman.hui@link.cuhk.edu.hk &nbsp;·&nbsp; github.com/freemanhui &nbsp;·&nbsp; Poster paper: OpenReview — NeurReps 2026, #46</div>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=96x96&amp;data=https://freemanhui.github.io/" alt="GitHub QR">
+  </footer>
+
+  <p class="back">← <a href="index.html">Back to freemanhui.github.io</a> · Tip: print this page (A4) for the one-page handout.</p>
+</div>
+</body>
+</html>
